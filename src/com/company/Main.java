@@ -1,0 +1,25 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter weight in pounds: ");
+
+        double weight = input.nextDouble();
+
+        System.out.print("Enter height in inches: ");
+        double height = input.nextDouble();
+
+        weight = weight * 0.45359237;
+
+        height = height * 0.0254;
+
+        double bim = weight / Math.pow(height, 2);
+
+        System.out.println("Your BIM is " + bim);
+    }
+}
